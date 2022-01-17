@@ -18,7 +18,8 @@
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
-                <img class="w-[70px] " src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="">
+                <img class="w-[70px] " src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                    alt="">
                 <h1 class="text-2xl ml-1 text-gray-500	pb-2 font-medium">Noticias</h1>
             </div>
             <div class="w-6/12">
@@ -65,70 +66,196 @@
             <div class="  top-[1rem]   pb-10  ">
                 <nav class=" lg:text-sm lg:leading-6   ">
                     <div class="">
-                        <div class=" pt-20 h-full overflow-auto	  ml-0.5 ">
-                            <div class=" ">
-                                <div class="flex items-center rounded-r-[50px] h-10 text-blue-600 mr-2" style="background-color: #E3EDFD">
-                                    <div class="pl-7">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                        <ul class="pt-20 h-full overflow-auto	  >" style="list-style-type: none">
+                            <li>
+                                <!--nav bar item 1-->
+                                <div class=" ">
+                                    <div class="  flex items-center rounded-r-[50px] h-10  mr-2"
+                                        style="background-color: #E3EDFD">
+                                        <div class=" text-blue-600 ml-7 ">
+                                            <a class="flex items-center" href="">
+                                                <div class="mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                        viewBox="0 0 24 24" stroke="currentColor">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <span>Noticias destacadas</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!--nav bar item 2-->
+                                <div class="  ">
+                                    <div class=" ">
+                                        <div
+                                            class="flex items-center rounded-r-[50px] text-gray-600 mr-2 hover:text-blue-600  h-10 text-gray-600 mr-2 hover:text-blue-600">
+                                            <div class="pl-7 mr-3">
+
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M22.64,11.14l-9.79-9.79c-0.5-0.5-1.27-0.45-1.72,0l-9.78,9.79c-0.66,0.66-0.26,1.45,0,1.72l9.78,9.79 c0.44,0.44,1.21,0.51,1.72,0l9.79-9.79C22.91,12.59,23.29,11.79,22.64,11.14z M13.84,13.84L12,18l-1.84-4.17L6,12l4.16-1.84L12,6 l1.84,4.16L18,12L13.84,13.84z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <span href="">Búsquedas guardadas</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!--nav bar item 3-->
+                                <div class="  ">
+                                    <div class=" ">
+                                        <div
+                                            class="flex items-center rounded-r-[50px] text-gray-600 mr-2 hover:text-blue-600 h-10  mr-2">
+                                            <div class="pl-7 mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="">Siguiendo</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <!--nav bar item 3-->
+                                <div class="  ">
+                                    <div class=" ">
+                                        <div
+                                            class="flex items-center rounded-r-[50px] text-gray-600 mr-2 hover:text-blue-600 h-10  mr-2">
+                                            <div class="pl-7 mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <a href="">Siguiendo</a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           
+                            </li>
+                        </ul>
+                        <div class=" rounded-r-[50px] mt-4  mr-2   mr-2">
+                            <div class=" ml-7 text-gray-600 mr-2 hover:text-blue-600 h-full mr-2 border-t">
+                                <a class="flex items-center mt-4" href="">
+                                    <div class="mr-3">
+                                        <span href="">Descarga la app para Android</span>
+
+                                    </div>
+                                    <div class=" ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                         </svg>
-                                    </div>
-                                    <div>
-                                        <span>Algo importante</span>
-                                    </div>
 
-                                </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" ml-7 text-gray-600 mt-4 mr-2 hover:text-blue-600  mr-2 ">
+                                <a class="flex items-center" href="">
+                                    <div class="mr-3">
+                                        <span href="">Descarga la app para iOS</span>
 
-                           
-                         
-                           
-                          
-                          
+                                    </div>
+                                    <div class=" ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+
+                                    </div>
+                                </a>
+                            </div>
+                            <div class=" ml-7 text-gray-600 mt-4 mr-2 hover:text-blue-600  mr-2 ">
+                                <a class="flex items-center" href="">
+                                    <div class="mr-3">
+                                        <span href="">Ayuda</span>
+
+                                    </div>
+                                    <div class=" ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                        </svg>
+
+                                    </div>
+                                </a>
+                            </div>
+
                         </div>
+
+
                 </nav>
             </div>
         </aside>
 
-        <main class="w-3/5  mt-28 ml-10" >
+        <main class=" container w-3/5  mt-28 ml-10">
             <!--Titulares-->
-            <div>
+            <div class="h-auto">
                 <div class="flex justify-between  h-8  ">
                     <span>Titulares</span>
                     <span>Más titulares</span>
                 </div>
                 <div class=" flex items-center justify-between border border-slate-300  px-4  h-14 w-full  rounded-lg">
-                    <div >
+                    <div>
                         <span>Noticias sobre el COVID‑19:</span>
                         <span>Mira la cobertura más reciente sobre el coronavirus</span>
                     </div>
                     <div>
                         <span>incono</span>
-                    </div>                  
-                     
+                    </div>
+
                 </div>
 
             </div>
             <div>
-                <div class=" mt-4 h-auto  border border-slate-300  px-4  h-14 w-full  rounded-lg">
-                  <div class="flex items-center justify-between">
-                    <div>
-                        <p>Carreteras heladas, árboles caídos y accidentes de autos: las imágenes que deja la fuerte nevada</p>
+                <div class=" mt-4 h-auto  border border-slate-300  px-4  w-full  rounded-lg">
+                    <div class="flex items-center justify-between">
                         <div>
-                            <span>Univision notiica</span>
-                            <span>Hace 10 horas</span>
+                            <p>Carreteras heladas, árboles caídos y accidentes de autos: las imágenes que deja la fuerte
+                                nevada</p>
+                            <div>
+                                <span>Univision notiica</span>
+                                <span>Hace 10 horas</span>
+                            </div>
                         </div>
+                        <img class="w-8 h-8"
+                            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12A2C/production/_115523367_80bb2ebf-8c1a-4b72-97ec-2c61e51fa854.jpg"
+                            alt="">
                     </div>
-                    <img class="w-8 h-8" src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12A2C/production/_115523367_80bb2ebf-8c1a-4b72-97ec-2c61e51fa854.jpg" alt="">
-                    </div>  
                     <div>
                         <ul>
                             <li>FC. Barcelona</li>
                             <li>Real Madrid</li>
                             <li>Real Betis</li>
                             <li>Atlético de Madrid</li>
-                          </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
