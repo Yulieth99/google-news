@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class News extends Model
+class WebSite extends Model
 {
     use HasFactory;
-    
-    protected $fillable = ['owner', 'headline','image','category'];
+
+    protected $table = "web_sites";
 }

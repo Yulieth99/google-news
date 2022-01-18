@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Http\Requests\StoreNewsRequest;
 use App\Http\Requests\UpdateNewsRequest;
+use Illuminate\Support\Facades\DB;
+
 
 class NewsController extends Controller
 {
@@ -15,6 +17,14 @@ class NewsController extends Controller
      */
     public function index()
     {
+        $headline = DB::select('SELECT news.id, news.headline, news.image, web_sites.web_site_name, news_categories.category_name, news.updated_at FROM `news` 
+                                INNER JOIN web_sites
+                                ON news.owner = web_sites.id
+                                INNER JOIN news_categories
+                                on news.category = news_categories.id
+                                ORDER by category_name');
+        return $headline;
+
         return view('News.index');
     }
 
@@ -36,7 +46,8 @@ class NewsController extends Controller
      */
     public function store(StoreNewsRequest $request)
     {
-        //
+        $headline = News::create($request->all());
+        return $request;
     }
 
     /**

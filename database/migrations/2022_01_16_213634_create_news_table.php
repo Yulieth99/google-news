@@ -15,11 +15,11 @@ class CreateNewsTable extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('web_site');
+            $table->unsignedBigInteger('owner');
             $table->string('headline',100);
             $table->string('image');
             $table->unsignedBigInteger('category');
-            $table->foreign('web_site')->references('id')->on("web_sites")->onDelete('cascade');
+            $table->foreign('owner')->references('id')->on("web_sites")->onDelete('cascade');
             $table->foreign('category')->references('id')->on("news_categories")->onDelete('cascade');
             $table->timestamps();
         });

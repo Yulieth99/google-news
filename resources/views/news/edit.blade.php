@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('main')
-<form method="POST" action="{{route('news.store')}}">
+<form method="POST" action="{{route('news.update')}}">
     @csrf
   <!--formario noticia -->
 
     <div class="bg-indigo-50 max-h-fit md:px-20 py-6">
       <div class=" bg-white rounded-md px-6 py-3 max-w-2xl mx-auto">
-        <h1 class="text-center text-2xl font-bold text-gray-500 mb-5">Nuevo Titular</h1>
+        <h1 class="text-center text-2xl font-bold text-gray-500 mb-5">Edtar Titular</h1>
         <div class="space-y-2">
             <div>
                 <label for="owner" class="text-lx ">Web site:</label>
@@ -34,7 +34,7 @@
                   </select>
                 </div>
               </div>          </div>
-          <button type="submit" class=" h-8 px-6  mx-auto block rounded-md text-md font-semibold text-gray-500 bg-blue-100  ">Agregar</button>
+          <button type="submit" class=" h-8 px-6  mx-auto block rounded-md text-md font-semibold text-gray-500 bg-blue-100  ">Actualizar</button>
         </div>
       </div>
     </div>
