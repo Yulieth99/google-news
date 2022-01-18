@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -51,13 +50,16 @@
                     </svg>
                 </div>
                 <div>
+                    <a href="{{route('news.create')}}">
                     <svg class="text-black h-6 w-6 fill-current" data-icon="plus-circle"
                         class="svg-inline--fa fa-plus-circle fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512">
                         <path fill="currentColor"
                             d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z">
                         </path>
-                    </svg> </div>
+                    </svg> 
+                </a>
+                </div>
             </div>
         </div>
     </div>
@@ -136,7 +138,7 @@
                             </li>
                             <li>
                                 <!--nav bar item 3-->
-                                <div class="  ">
+                                <div class="    ">
                                     <div class=" ">
                                         <div
                                             class="flex items-center rounded-r-[50px] text-gray-600 mr-2 hover:text-blue-600 h-10  mr-2">
@@ -215,50 +217,9 @@
             </div>
         </aside>
 
-        <main class=" container w-3/5  mt-28 ml-10">
-            <!--Titulares-->
-            <div class="h-auto">
-                <div class="flex justify-between  h-8  ">
-                    <span>Titulares</span>
-                    <span>Más titulares</span>
-                </div>
-                <div class=" flex items-center justify-between border border-slate-300  px-4  h-14 w-full  rounded-lg">
-                    <div>
-                        <span>Noticias sobre el COVID‑19:</span>
-                        <span>Mira la cobertura más reciente sobre el coronavirus</span>
-                    </div>
-                    <div>
-                        <span>incono</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div>
-                <div class=" mt-4 h-auto  border border-slate-300  px-4  w-full  rounded-lg">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p>Carreteras heladas, árboles caídos y accidentes de autos: las imágenes que deja la fuerte
-                                nevada</p>
-                            <div>
-                                <span>Univision notiica</span>
-                                <span>Hace 10 horas</span>
-                            </div>
-                        </div>
-                        <img class="w-8 h-8"
-                            src="https://ichef.bbci.co.uk/news/640/cpsprodpb/12A2C/production/_115523367_80bb2ebf-8c1a-4b72-97ec-2c61e51fa854.jpg"
-                            alt="">
-                    </div>
-                    <div>
-                        <ul>
-                            <li>FC. Barcelona</li>
-                            <li>Real Madrid</li>
-                            <li>Real Betis</li>
-                            <li>Atlético de Madrid</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <main class=" container w-6/12  mt-28 ml-10 ">
+           @yield('main')
+            
         </main>
     </div>
     <div class="">

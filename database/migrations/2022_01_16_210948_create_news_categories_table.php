@@ -14,7 +14,7 @@ class CreateNewsCategoriesTable extends Migration
     public function up()
     {
         Schema::create('news_categories', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('category_name',50);
             $table->timestamps();
         });
