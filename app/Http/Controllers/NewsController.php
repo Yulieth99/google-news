@@ -6,6 +6,7 @@ use App\Models\News;
 use App\Http\Requests\StoreNewsRequest;
 use App\Http\Requests\UpdateNewsRequest;
 use App\Models\Category;
+use App\Models\WebSite;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -45,7 +46,7 @@ class NewsController extends Controller
                                        ->join('news_categories', 'news.category', '=', 'news_categories.id')
                                        ->where('news.category', $category->id)
                                        ->where('news.key_word', $keyword->key_word)
-                                       -> select('news.id', 'headline', 'image', 'web_sites.web_site_name', 'news.updated_at')
+                                       -> select('news.id','web_sites.web_site_name as owner','key_word', 'headline', 'image', 'Category', 'news.updated_at')
                                        ->orderByDesc('news.updated_at')
                                        ->get();
                 foreach($k as  $k1){   
@@ -70,6 +71,7 @@ class NewsController extends Controller
                 array_push($data,$values);
     
         }
+  
            return view('News.index', compact('data', 'idCategory'));
     }
 
@@ -80,7 +82,11 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('News.create');
+        $webSite = WebSite::all('id','web_site_name');
+
+        $category = Category::all('id', 'category_name');
+
+        return view('News.create', compact('category','webSite'));
     }
 
     /**
@@ -112,9 +118,15 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function edit(News $news)
+    public function edit(int $news )
     {
-        //
+        $webSite = WebSite::all('id','web_site_name');
+
+        $category = Category::all('id', 'category_name');
+
+        $headline = News::find($news);
+
+        return view('News.edit', compact('headline','category','webSite'));
     }
 
     /**
