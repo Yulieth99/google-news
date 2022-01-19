@@ -35,7 +35,11 @@
                 </span></a>
         </div>
     @endif
+    
+    <!--Ultimas categoria en la cual se inseto una noticia -->
 
+        
+   
     <div class=" transition-all- duration-500">
 
         @foreach( $item['keyWord'] as $key => $news)
@@ -151,6 +155,7 @@
 
 
     </div>
+  
 
 @endforeach
 

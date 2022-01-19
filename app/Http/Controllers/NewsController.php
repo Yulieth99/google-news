@@ -19,17 +19,14 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(int  $lastInserted = null)
+    public function index()
     {
-        $idCategory = $lastInserted;
-              
-        if($idCategory == null){
-            $idCategory =DB::table('news')->Select('category')
-            ->latest('updated_at')
-            ->take(1) 
-            -> get();
-        }
-     
+            
+        $idCategory =DB::table('news')->Select('category')
+                                      ->latest('updated_at')
+                                      ->take(1) 
+                                      ->get();
+                         
         $categories = Category::all();
        
         $data = array();
@@ -49,15 +46,43 @@ class NewsController extends Controller
                                        -> select('news.id','web_sites.web_site_name as owner','key_word', 'headline', 'image', 'Category', 'news.updated_at')
                                        ->orderByDesc('news.updated_at')
                                        ->get();
-                foreach($k as  $k1){   
-                    $val = new Carbon($k1->updated_at )  ;
-                    $k1->updated_at = ucfirst($val->diffForHumans());
-                    }
-            
+                            
                 $arrayKeyWords = array("keyWord" => $keyword->key_word,
                                         "news"   => $k);              
-            
-                array_push($news,$arrayKeyWords);             
+                             
+                array_push($news,$arrayKeyWords); 
+               
+                $newsLenght = sizeof($news);
+                if(sizeof($news) >= 2)
+                {
+                    foreach ( $news as $key => $i) {
+                        foreach ($news as $key2 => $j) {
+                          
+                            $val1 = $news[$key];
+                            $val2 = $news[$key2]; 
+                     
+                            if( $key != $key2 ){                                
+
+                                $date1 = new Carbon($val1['news'][0]->updated_at);
+                                $date2 = new Carbon( $val2['news'][0]->updated_at);
+                                    
+                                if( ($date1->gt($date2)) ){
+                                    $temp =   $val1;                       
+                                    $news[$key] = $news[$key2];
+                                    $news[$key2] =  $temp;                    
+                                } 
+                            }                        
+                        }                   
+                    }                                                                      
+                }            
+            }
+          
+            foreach($news as $keyword){
+                foreach ($keyword['news'] as $key => $update) {
+
+                    $val = new Carbon($update->updated_at )  ;
+                    $update->updated_at =ucfirst($val->diffForHumans());     
+                }
             }
         
             $values = array( 
@@ -65,9 +90,20 @@ class NewsController extends Controller
             "category"    => $category->category_name,
             "keyWord"     => $news
                 );
-                array_push($data,$values);    
-        }
-  
+
+            array_push($data,$values);    
+        }       
+               
+        foreach ($data as $key => $value) {
+           
+            if( $value['categoryID'] == $idCategory[0]->category){
+
+                $temp = $data [0];            
+                $data [0] = $data [$key];
+                $data [$key] =  $temp;     
+              break;
+            }          
+        }      
         return view('News.index', compact('data', 'idCategory'));
     }
 
