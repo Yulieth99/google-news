@@ -13,7 +13,7 @@
             <div>
             <div>
               <label for="key_word" class="text-lx mr-2 ">Palabra clave:</label>
-              <input type="text"  id="key_word" name="key_word" class=" outline-none py-2 text-md border rounded-md " />
+              <input type="text"  id="key_word" name="key_word" class=" outline-none py-2 pl-3 text-md border rounded-md " />
             </div>
               <div>
             <label for="headline" class="block mb-2 text-lx ">Titular:</label>
@@ -21,7 +21,7 @@
           </div>
           <div>
             <label for="image" class="text-lx ">Imagen:</label>
-            <input type="text"  id="image" name="image" class=" outline-none py-2 text-md border rounded-md w-full" />
+            <input type="text"  id="image" name="image" class=" outline-none pl-3 py-2 text-md border rounded-md w-full" />
           </div>
           <div class="my-2 flex items-center">
             <label for="owner" class="text-lx mr-[3px] ">Sitio web:</label>

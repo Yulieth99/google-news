@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('main')
-<form method="POST" action="{{route('news.store')}}">
+<form method="POST" action="{{route('news.update',$headline)}}">
     @csrf
+    @method('put')
   <!--formaulario editar noticia -->
 
     <div class="bg-indigo-50 max-h-fit md:px-20 py-6">
@@ -13,7 +14,7 @@
             <div>
             <div>
               <label for="key_word" class="text-lx mr-2 ">Palabra clave:</label>
-              <input type="text"  id="key_word" name="key_word" value="{{$headline->key_word}}" class=" outline-none py-2 text-md border rounded-md " />
+              <input type="text"  id="key_word" name="key_word" value="{{$headline->key_word}}" class=" outline-none py-2 pl-3 text-md border rounded-md " />
             </div>
               <div>
             <label for="headline" class="block mb-2 text-lx ">Titular:</label>
@@ -21,7 +22,7 @@
           </div>
           <div>
             <label for="image" class="text-lx ">Imagen:</label>
-            <input type="text" value="{{$headline->image}}" id="image" name="image" class=" outline-none py-2 text-md border rounded-md w-full" />
+            <input type="text" value="{{$headline->image}}" id="image" name="image" class=" outline-none py-2 pl-3 text-md border rounded-md w-full" />
           </div>
           <div class="my-2 flex items-center">
             <label for="owner" class="text-lx mr-[3px] ">Sitio web:</label>

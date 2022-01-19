@@ -53,14 +53,11 @@ class NewsController extends Controller
                     $val = new Carbon($k1->updated_at )  ;
                     $k1->updated_at = ucfirst($val->diffForHumans());
                     }
-
             
                 $arrayKeyWords = array("keyWord" => $keyword->key_word,
-                                        "news"   => $k);
-                                 
+                                        "news"   => $k);              
             
-                array_push($news,$arrayKeyWords);
-             
+                array_push($news,$arrayKeyWords);             
             }
         
             $values = array( 
@@ -68,11 +65,10 @@ class NewsController extends Controller
             "category"    => $category->category_name,
             "keyWord"     => $news
                 );
-                array_push($data,$values);
-    
+                array_push($data,$values);    
         }
   
-           return view('News.index', compact('data', 'idCategory'));
+        return view('News.index', compact('data', 'idCategory'));
     }
 
     /**
@@ -98,7 +94,7 @@ class NewsController extends Controller
     public function store(StoreNewsRequest $request)
     {
         $headline = News::create($request->all());
-        return $request;
+        return redirect()->route('news.index');
     }
 
     /**
@@ -109,7 +105,7 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        //
+        return redirect()->route('news.index');
     }
 
     /**
@@ -120,6 +116,7 @@ class NewsController extends Controller
      */
     public function edit(int $news )
     {
+       
         $webSite = WebSite::all('id','web_site_name');
 
         $category = Category::all('id', 'category_name');
@@ -138,7 +135,8 @@ class NewsController extends Controller
      */
     public function update(UpdateNewsRequest $request, News $news)
     {
-        //
+        $news->update($request->all());
+        return redirect()->route('news.index');
     }
 
     /**
@@ -147,8 +145,11 @@ class NewsController extends Controller
      * @param  \App\Models\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy(int $news)
     {
-        //
+        
+        News::where('id',$news)->delete();
+        return redirect()->route('news.index');
+
     }
 }
