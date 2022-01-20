@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="fixed inset-x-0 top-0 shadow-md  z-20">
+    <div id="navTop" class="fixed inset-x-0 top-0 shadow-md  z-20">
         <div class="flex  pl-3 pr-6 h-16 justify-between items-center bg-white">
             <div class="flex  justify-between items-center w-9/12">
             <div class="flex items-center md:w-62 ">
@@ -81,10 +81,15 @@
     <div class="flex">
         <aside id="sideBar" class="h-screen absolute bg-white  lg:sticky top-0 inset-y-0 w-[280px] transform -translate-x-full transition duration-200 ease-in-out
                       lg:relative lg:translate-x-0">
-            <div class="  top-[1rem]   pb-10  ">
+            <div class="    pb-10  ">
+                <div class="flex items-center md:w-62 pt-4 ">
+                    <img class="w-[70px] ml-3 " src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                        alt="">
+                    <h1 class="text-2xl ml-1 text-gray-500	pb-2 font-medium">Noticias</h1>
+                </div>
                 <nav class=" lg:text-sm lg:leading-6   ">
                     <div class="">
-                        <ul class="pt-20 h-full overflow-auto	  >" style="list-style-type: none">
+                        <ul class="pt-6 md:pt-10 h-full overflow-auto	  >" style="list-style-type: none">
                             <li>
                                 <!--nav bar item 1-->
                                 <div class=" ">

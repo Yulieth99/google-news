@@ -93,9 +93,9 @@
 
 
                         <div>
-                            <ul class="w-4/5 ">
-                                <li class=" mb-4	">
-                                    <div class="flex  justify-between">
+                            <ul  class="w-4/5  ">
+                                <li type="disc" class=" ml-4 mb-4 	">
+                                    <div class="flex  justify-between  list-inside">
                                         <div class="mr-4 w-full">
                                             <a class="" href="">
                                                 <p class="  hover:underline font-semibold text-sm  text-gray-700">
