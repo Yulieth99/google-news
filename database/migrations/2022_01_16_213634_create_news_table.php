@@ -16,9 +16,9 @@ class CreateNewsTable extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('owner');
-            $table->string('key_word',30);
-            $table->string('headline',100);
-            $table->string('image');
+            $table->string('key_word',50);
+            $table->text('headline');
+            $table->text('image');
             $table->unsignedBigInteger('category');
             $table->foreign('owner')->references('id')->on("web_sites")->onDelete('cascade');
             $table->foreign('category')->references('id')->on("news_categories")->onDelete('cascade');
