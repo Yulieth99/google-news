@@ -2,7 +2,7 @@
 @section('main')
 <form method="POST" action="{{route('news.store')}}">
     @csrf
-  <!--formario noticia -->
+  <!--formario noticia           -->
 
     <div class="bg-indigo-50 max-h-fit md:px-20 py-6">
       <div class=" bg-white rounded-md px-6 py-3 max-w-2xl mx-auto">
